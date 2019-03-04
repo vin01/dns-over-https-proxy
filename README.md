@@ -1,11 +1,11 @@
-#How to build and run
+# How to build and run
 
 ```
 docker build -f Dockerfile . -t dns-proxy:test
 docker run --rm -it -p 5053:5053/tcp -p 5053:5053/udp dns-proxy:test
 ```
 
-#Tested record types
+# Tested record types
 
 - A
 - AAAA
@@ -15,7 +15,7 @@ docker run --rm -it -p 5053:5053/tcp -p 5053:5053/udp dns-proxy:test
 - MX
 - TXT
 
-#Sample tests and outputs
+# Sample tests and outputs
 
 ```
 dig google.com @127.0.0.1 -p 5053 
@@ -66,4 +66,4 @@ fbi.gov.		8	IN	DNSKEY	257 3 8 QVFQRnVPaVVsTlVKS0NWVEZaZ1FGcmswc1lKcVBrMXcrTUlsUz
 
 ```
 
-Note: local modified dnslib exists to address [an issue](https://bitbucket.org/paulc/dnslib/issues/23/dnskey-record-not-properly-encoded) related to string encoding. Also for future testing to add support to allow transparent parsing of different record types like CAA, RRSIG.
+_Note: local modified dnslib exists to address [an issue](https://bitbucket.org/paulc/dnslib/issues/23/dnskey-record-not-properly-encoded) related to string encoding. Also for future testing to add support to allow transparent parsing of different record types like CAA, RRSIG._
