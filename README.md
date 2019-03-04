@@ -1,3 +1,7 @@
+# What and how?
+
+A simple python dns proxy to test DNS over TLS (using google's resolver). It supports both TCP & UDP queries.
+
 # How to build and run
 
 ```
